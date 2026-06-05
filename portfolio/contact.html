@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Donas</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-page">
+        <div class="contact-img">
+            <img src="img/cnt.jpeg" alt="Donas">
+        </div>
+
+        <div class="contact-content">
+            <h1>Contact <span>Me</span></h1>
+
+            <div class="contact-typing">
+                Let's talk about <span class="typing"></span>
+            </div>
+
+            <p class="contact-desc">
+                Have a project, role, or idea in mind? I'm just a message away.
+                Reach out directly on WhatsApp or send me an email. I'll respond promptly.
+            </p>
+
+            <div class="contact-cards">
+                <a href="https://wa.me/2349061722497" target="_blank" class="contact-card">
+                    <div class="contact-icon whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="dm">Direct Message</h3>
+                        <p>Chat with me on WhatsApp</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+
+                <a href="mailto:donasdominion@gmail.com" class="contact-card">
+                    <div class="contact-icon mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="dm">Send a Mail</h3>
+                        <p>donasdominion@gmail.com</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+            </div>
+
+            <div class="social-icons contact-social">
+                <a href="https://linkedin.com/in/dominion-donas-802b39196" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Donasub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:donasdominion@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/dominiondonas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const typingText = document.querySelector(".typing");
+        const words = ["new projects", "opportunities", "collaboration", "your ideas"];
+        let wi = 0, ci = 0, del = false;
+
+        function type() {
+            const w = words[wi];
+            typingText.textContent = del ? w.substring(0, ci - 1) : w.substring(0, ci + 1);
+            ci += del ? -1 : 1;
+            let d = del ? 50 : 100;
+            if (!del && ci === w.length) { d = 1300; del = true; }
+            else if (del && ci === 0) { del = false; wi = (wi + 1) % words.length; d = 400; }
+            setTimeout(type, d);
+        }
+        type();
+    </script>
+</body>
+</html>

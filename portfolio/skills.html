@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Skills – Donas</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Donas</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skills-page">
+        <!-- LEFT: Title + Rings + Counter -->
+        <div class="skills-left">
+            <h1>My <span>Skill Set</span></h1>
+            <div class="skills-typing">
+                Master of <span class="typing"></span>
+            </div>
+            <p class="skills-intro">
+                Multi-disciplinary expertise built across years of hands-on practice in 
+                IT, networking, cloud, and security.
+            </p>
+
+            <!-- Circular Progress Rings -->
+            <div class="rings-container">
+                <div class="ring-item" style="--p:92;--c:#b74b4b">
+                    <svg viewBox="0 0 120 120">
+                        <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="ring-fill" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="ring-text">
+                        <h3>92<small>%</small></h3>
+                        <p>IT Support</p>
+                    </div>
+                </div>
+
+                <div class="ring-item" style="--p:88;--c:#b74b4b">
+                    <svg viewBox="0 0 120 120">
+                        <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="ring-fill" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="ring-text">
+                        <h3>88<small>%</small></h3>
+                        <p>Networking</p>
+                    </div>
+                </div>
+
+                <div class="ring-item" style="--p:85;--c:#b74b4b">
+                    <svg viewBox="0 0 120 120">
+                        <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="ring-fill" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="ring-text">
+                        <h3>85<small>%</small></h3>
+                        <p>Cloud</p>
+                    </div>
+                </div>
+
+                <div class="ring-item" style="--p:82;--c:#b74b4b">
+                    <svg viewBox="0 0 120 120">
+                        <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="ring-fill" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="ring-text">
+                        <h3>82<small>%</small></h3>
+                        <p>Security</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="skills-counter">
+                <div class="counter-item">
+                    <h2 class="count" data-target="3">0</h2>
+                    <p>Years Exp</p>
+                </div>
+                <div class="counter-item">
+                    <h2 class="count" data-target="20">0</h2>
+                    <p>Technologies</p>
+                </div>
+                <div class="counter-item">
+                    <h2 class="count" data-target="10">0</h2>
+                    <p>Certifications</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Filters → Hex Grid → Actions -->
+        <div class="skills-right">
+            <!-- Filter Pills (top) -->
+            <div class="skill-filters">
+                <button class="filter-pill" data-filter="network">Network</button>
+                <button class="filter-pill" data-filter="cloud">Cloud</button>
+                <button class="filter-pill" data-filter="security">Security</button>
+                <button class="filter-pill" data-filter="systems">Systems</button>
+                <button class="filter-pill active" data-filter="web">Web</button>
+            </div>
+
+            <!-- Hexagonal Grid (middle) -->
+            <div class="hex-grid">
+                <!-- Network -->
+                <div class="hex" data-cat="network"><div class="hex-inner"><i class="fa-solid fa-network-wired"></i><span>TCP/IP</span></div></div>
+                <div class="hex" data-cat="network"><div class="hex-inner"><i class="fa-solid fa-wifi"></i><span>Wi-Fi</span></div></div>
+                <div class="hex" data-cat="network"><div class="hex-inner"><i class="fa-solid fa-server"></i><span>MikroTik</span></div></div>
+                <div class="hex" data-cat="network"><div class="hex-inner"><i class="fa-solid fa-shield"></i><span>VPN</span></div></div>
+
+                <!-- Cloud -->
+                <div class="hex" data-cat="cloud"><div class="hex-inner"><i class="fa-brands fa-microsoft"></i><span>Azure</span></div></div>
+                <div class="hex" data-cat="cloud"><div class="hex-inner"><i class="fa-brands fa-aws"></i><span>AWS</span></div></div>
+                <div class="hex" data-cat="cloud"><div class="hex-inner"><i class="fa-solid fa-cloud"></i><span>M365</span></div></div>
+
+                <!-- Security -->
+                <div class="hex" data-cat="security"><div class="hex-inner"><i class="fa-solid fa-shield-halved"></i><span>Firewalls</span></div></div>
+                <div class="hex" data-cat="security"><div class="hex-inner"><i class="fa-solid fa-lock"></i><span>Endpoint</span></div></div>
+                <div class="hex" data-cat="security"><div class="hex-inner"><i class="fa-solid fa-user-shield"></i><span>AD/GPO</span></div></div>
+
+                <!-- Systems -->
+                <div class="hex" data-cat="systems"><div class="hex-inner"><i class="fa-brands fa-windows"></i><span>Windows</span></div></div>
+                <div class="hex" data-cat="systems"><div class="hex-inner"><i class="fa-brands fa-linux"></i><span>Linux</span></div></div>
+                <div class="hex" data-cat="systems"><div class="hex-inner"><i class="fa-brands fa-apple"></i><span>macOS</span></div></div>
+
+                <!-- Web (default visible) -->
+                <div class="hex" data-cat="web"><div class="hex-inner"><i class="fa-brands fa-html5"></i><span>HTML</span></div></div>
+                <div class="hex" data-cat="web"><div class="hex-inner"><i class="fa-brands fa-css3"></i><span>CSS</span></div></div>
+                <div class="hex" data-cat="web"><div class="hex-inner"><i class="fa-brands fa-js"></i><span>JavaScript</span></div></div>
+                <div class="hex" data-cat="web"><div class="hex-inner"><i class="fa-solid fa-code"></i><span>PowerShell</span></div></div>
+            </div>
+
+            <!-- Actions (bottom) -->
+            <div class="exp-actions">
+                <div class="social-icons exp-social">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:donasdominion@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="contact.html" class="btn">Hire me</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Typing Effect
+        const typingText = document.querySelector('.typing');
+        const words = ["IT Support", "Network Engineering", "Cloud Infrastructure", "Cybersecurity", "Web Development"];
+        let wi = 0, ci = 0, del = false;
+        function type() {
+            const w = words[wi];
+            typingText.textContent = del ? w.substring(0, ci - 1) : w.substring(0, ci + 1);
+            ci += del ? -1 : 1;
+            let d = del ? 50 : 100;
+            if (!del && ci === w.length) { d = 1600; del = true; }
+            else if (del && ci === 0) { del = false; wi = (wi + 1) % words.length; d = 400; }
+            setTimeout(type, d);
+        }
+        type();
+
+        // Counter Animation
+        document.querySelectorAll('.count').forEach(el => {
+            const target = +el.dataset.target;
+            let cur = 0;
+            const step = Math.ceil(target / 40);
+            const iv = setInterval(() => {
+                cur += step;
+                if (cur >= target) { el.textContent = target + '+'; clearInterval(iv); }
+                else el.textContent = cur;
+            }, 40);
+        });
+
+        // Filter Logic
+        const pills = document.querySelectorAll('.filter-pill');
+        const hexes = document.querySelectorAll('.hex');
+
+        function applyFilter(filter) {
+            hexes.forEach(h => {
+                if (h.dataset.cat === filter) {
+                    h.style.display = '';
+                    h.style.animation = 'hexPop 0.5s ease';
+                } else {
+                    h.style.display = 'none';
+                }
+            });
+        }
+
+        pills.forEach(p => p.addEventListener('click', () => {
+            pills.forEach(x => x.classList.remove('active'));
+            p.classList.add('active');
+            applyFilter(p.dataset.filter);
+        }));
+
+        // Show Web by default on load
+        applyFilter('web');
+    </script>
+</body>
+</html>
