@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Donas</a>
+        <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="img/donas-img.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Donas</span></h1>
+            <h2 class="typing-text">I'm a <span class="typing"></span></h2>
+            <p> I'm a results-driven IT professional with 3+ years across IT support,
+                network engineering, cloud infrastructure, and digital transformation.
+                From the helpdesk to the server room, I deliver reliable systems,
+                secure networks, and smart automation that keep businesses running.</p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/dominion-donas-802b39196" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Donasub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:donasdominion@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/dominiondonas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="contact.html" class="btn">Hire me</a>
+        </div>
+    </section>
+    
+    <script src="js/menu.js"></script>
+    <!-- JAVASCRIPT -->
+    <script>
+        const typingText = document.querySelector('.typing');
+        const words = [
+            'IT Professional',
+            'Web Developer',
+            'Network Engineer',
+            'Cloud Engineer',
+            'Cybersecurity Analyst'
+        ];
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingDelay = 100;
+        let erasingDelay = 50;
+        let newWordDelay = 2000;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let delay = isDeleting ? erasingDelay : typingDelay;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                delay = newWordDelay;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                delay = 500;
+            }
+
+            setTimeout(typeEffect, delay);
+        }
+
+        document.addEventListener('DOMContentLoaded', typeEffect);
+    </script>
+</body>
+</html>

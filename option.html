@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Skills</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Donas</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skills-page">
+        <div class="skills-left">
+            <h1>My <span>Skills</span></h1>
+
+            <div class="core-typing">
+                My core areas are <span class="typing"></span>
+            </div>
+
+            <p class="skills-desc">
+                I build clean interfaces, configure secure networks, deploy cloud solutions,
+                and strengthen systems with practical cybersecurity skills.
+            </p>
+
+            <div class="skills-dashboard">
+                <div class="dashboard-top">
+                    <h2>Skill Dashboard</h2>
+                    <div class="dashboard-chip">Tap a circle</div>
+                </div>
+
+                <div class="area-list">
+                    <div class="area-item active" data-index="0">
+                        <i class="fa-solid fa-code"></i>
+                        <div>Web Development</div>
+                    </div>
+
+                    <div class="area-item" data-index="1">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <div>Networking</div>
+                    </div>
+
+                    <div class="area-item" data-index="2">
+                        <i class="fa-solid fa-cloud"></i>
+                        <div>Cloud Services</div>
+                    </div>
+
+                    <div class="area-item" data-index="3">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>Cybersecurity</div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="mini-stat">
+                        <h3>4</h3>
+                        <p>Core Areas</p>
+                    </div>
+
+                    <div class="mini-stat">
+                        <h3>24/7</h3>
+                        <p>Problem Solving</p>
+                    </div>
+
+                    <div class="mini-stat">
+                        <h3>Fast</h3>
+                        <p>Learning</p>
+                    </div>
+
+                    <div class="mini-stat">
+                        <h3>Fun</h3>
+                        <p>Mode</p>
+                    </div>
+                </div>
+
+                <div class="focus-panel">
+                    <div class="focus-label">Current Focus</div>
+                    <h3 id="focusTitle">Web Development</h3>
+                    <p id="focusText">
+                        Responsive websites and modern web apps built with clean code and smooth user experience.
+                    </p>
+                    <div class="focus-tags" id="focusTags"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-right">
+            <article class="skill-circle active" data-index="0">
+                <div class="circle-content">
+                    <div class="circle-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Web Dev</h3>
+                    <p>Frontend design, clean layouts, and interactive websites.</p>
+                    <div class="mini-tags">
+                        <div class="tag">HTML/CSS</div>
+                        <div class="tag">JavaScript</div>
+                        <div class="tag">UI/UX</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="skill-circle" data-index="1">
+                <div class="circle-content">
+                    <div class="circle-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <p>Secure systems, routing, LAN/WAN support, and troubleshooting.</p>
+                    <div class="mini-tags">
+                        <div class="tag">LAN/WAN</div>
+                        <div class="tag">Routing</div>
+                        <div class="tag">VPN</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="skill-circle" data-index="2">
+                <div class="circle-content">
+                    <div class="circle-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3>Cloud</h3>
+                    <p>Deploying, managing, and monitoring cloud solutions.</p>
+                    <div class="mini-tags">
+                        <div class="tag">AWS</div>
+                        <div class="tag">Azure</div>
+                        <div class="tag">Migration</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="skill-circle" data-index="3">
+                <div class="circle-content">
+                    <div class="circle-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Security</h3>
+                    <p>Protecting systems through awareness, scans, and best practices.</p>
+                    <div class="mini-tags">
+                        <div class="tag">Risk Scans</div>
+                        <div class="tag">Hardening</div>
+                        <div class="tag">Audit</div>
+                    </div>
+                </div>
+            </article>
+            <div class="skills-actions">
+                <div class="social-icons skills-social">
+                    <a href="https://linkedin.com/in/dominion-donas-802b39196" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Donasub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:donasdominion@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/dominiondonas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+    <a href="#" class="btn">Hire me</a>
+</div>
+        <div>
+        
+    </section>
+
+    <script>
+        const skillsData = [
+            {
+                title: "Web Development",
+                desc: "Responsive websites and modern web apps built with clean code and smooth user experience.",
+                tags: ["HTML/CSS", "JavaScript", "UI/UX"]
+            },
+            {
+                title: "Networking",
+                desc: "Secure systems, routing, LAN/WAN support, and troubleshooting for reliable connectivity.",
+                tags: ["LAN/WAN", "Routing", "VPN"]
+            },
+            {
+                title: "Cloud Services",
+                desc: "Deploying, managing, and monitoring cloud solutions for flexibility and scalability.",
+                tags: ["AWS", "Azure", "Migration"]
+            },
+            {
+                title: "Cybersecurity",
+                desc: "Protecting systems through threat awareness, security scans, hardening, and best practices.",
+                tags: ["Risk Scans", "Hardening", "Audit"]
+            }
+        ];
+
+        const typingText = document.querySelector(".typing");
+        const areaItems = document.querySelectorAll(".area-item");
+        const skillCards = document.querySelectorAll(".skill-circle");
+        const focusTitle = document.getElementById("focusTitle");
+        const focusText = document.getElementById("focusText");
+        const focusTags = document.getElementById("focusTags");
+
+        let currentIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let timer;
+
+        function updateDashboard(index) {
+            areaItems.forEach((item, i) => {
+                item.classList.toggle("active", i === index);
+            });
+
+            skillCards.forEach((card, i) => {
+                card.classList.toggle("active", i === index);
+            });
+
+            focusTitle.textContent = skillsData[index].title;
+            focusText.textContent = skillsData[index].desc;
+            focusTags.innerHTML = skillsData[index].tags
+                .map(tag => `<div class="focus-tag">${tag}</div>`)
+                .join("");
+        }
+
+        function typeEffect() {
+            const currentWord = skillsData[currentIndex].title;
+
+            if (isDeleting) {
+                typingText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let delay = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                delay = 1300;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                currentIndex = (currentIndex + 1) % skillsData.length;
+                updateDashboard(currentIndex);
+                delay = 500;
+            }
+
+            timer = setTimeout(typeEffect, delay);
+        }
+
+        function startTyping(index) {
+            clearTimeout(timer);
+
+            if (typeof index === "number") {
+                currentIndex = index;
+            }
+
+            charIndex = 0;
+            isDeleting = false;
+            typingText.textContent = "";
+            updateDashboard(currentIndex);
+            timer = setTimeout(typeEffect, 300);
+        }
+
+        areaItems.forEach(item => {
+            item.addEventListener("click", () => {
+                startTyping(Number(item.dataset.index));
+            });
+        });
+
+        skillCards.forEach(card => {
+            card.addEventListener("click", () => {
+                startTyping(Number(card.dataset.index));
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateDashboard(0);
+            startTyping(0);
+        });
+    </script>
+</body>
+</html>
