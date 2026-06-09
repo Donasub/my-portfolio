@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Skills – Donas</title>
+    <title>Skills</title>
 </head>
 <body>
-
+    <canvas id="particle-canvas"></canvas>
     <header>
         <a href="index.html" class="logo">Donas</a>
-        <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
-        <nav>
+         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="mainNav">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="skills.html" class="active">Skills</a>
@@ -152,7 +154,6 @@
         </div>
     </section>
 
-    <script src="js/menu.js"></script>
     <script>
         // Typing Effect
         const typingText = document.querySelector('.typing');
@@ -205,5 +206,7 @@
         // Show Web by default on load
         applyFilter('web');
     </script>
+    <script src="js/particles.js"></script>
+    <script src="js/menu.js"></script> 
 </body>
 </html>
