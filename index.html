@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Portfolio</title>
+    <title>Donas Portfolio</title>
 </head>
 <body>
+    <canvas id="particle-canvas"></canvas>
     <header>
         <a href="#" class="logo">Donas</a>
-        <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-        <nav>
+        <nav id="mainNav">
             <a href="#" class="active"> Home</a>
             <a href="services.html">Services</a>
             <a href="skills.html">Skills</a>
@@ -29,7 +32,7 @@
         <div class="home-content">
             <h1>Hi, It's <span>Donas</span></h1>
             <h2 class="typing-text">I'm a <span class="typing"></span></h2>
-            <p> I'm a results-driven IT professional with 3+ years across IT support,
+            <p> I'm a results driven,  goal oriented IT professional with 3+ years across IT support,
                 network engineering, cloud infrastructure, and digital transformation.
                 From the helpdesk to the server room, I deliver reliable systems,
                 secure networks, and smart automation that keep businesses running.</p>
@@ -43,8 +46,7 @@
         </div>
     </section>
     
-    <script src="js/menu.js"></script>
-    <!-- JAVASCRIPT -->
+<!-- JAVASCRIPT -->
     <script>
         const typingText = document.querySelector('.typing');
         const words = [
@@ -89,5 +91,7 @@
 
         document.addEventListener('DOMContentLoaded', typeEffect);
     </script>
+    <script src="js/particles.js"></script>
+    <script src="js/menu.js"></script> 
 </body>
 </html>
