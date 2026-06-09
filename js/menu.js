@@ -1,25 +1,49 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const btn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('header nav');
-  if (!btn || !nav) return;
+//  HAMBURGER MENU TOGGLE
 
-  // Toggle nav and update button state/icon
-  function setButtonState(open) {
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.classList.toggle('open', open);
-    btn.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
 
-  btn.addEventListener('click', function () {
-    const isOpen = nav.classList.toggle('active');
-    setButtonState(isOpen);
-  });
+    if (!toggle || !nav) {
+        console.warn('Menu elements not found. Make sure id="menuToggle" and id="mainNav" exist.');
+        return;
+    }
 
-  // Close nav when a link is clicked (mobile) and restore button
-  document.querySelectorAll('header nav a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      nav.classList.remove('active');
-      setButtonState(false);
+    // Toggle menu open/close
+    toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        nav.classList.toggle('active');
+        toggle.classList.toggle('open');
+
+        const icon = toggle.querySelector('i');
+        if (icon) {
+            if (nav.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        }
     });
-  });
+
+    // Close when clicking outside menu
+    document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+            nav.classList.remove('active');
+            toggle.classList.remove('open');
+            const icon = toggle.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars';
+        }
+    });
+
+    // Close when a nav link is clicked
+    nav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            toggle.classList.remove('open');
+            const icon = toggle.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars';
+        });
+    });
 });
