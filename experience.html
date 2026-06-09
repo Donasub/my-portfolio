@@ -8,10 +8,13 @@
     <title>Experience</title>
 </head>
 <body>
+    <canvas id="particle-canvas"></canvas>
     <header>
         <a href="index.html" class="logo">Donas</a>
-        <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
-        <nav>
+         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="mainNav">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="skills.html">Skills</a>
@@ -206,7 +209,6 @@
         </div>
     </section>
 
-    <script src="js/menu.js"></script>
     <script>
         // Typing
         const typingText = document.querySelector(".typing");
@@ -287,5 +289,7 @@
         panels.forEach(setupSlider);
         initDots();
     </script>
+    <script src="js/particles.js"></script>
+    <script src="js/menu.js"></script> 
 </body>
 </html>
