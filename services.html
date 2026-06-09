@@ -8,11 +8,14 @@
     <title>Services</title>
 </head>
 <body>
+    <canvas id="particle-canvas"></canvas>
     <header>
         <a href="index.html" class="logo">Donas</a>
-        <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-        <nav>
+        <nav id="mainNav">
             <a href="index.html">Home</a>
             <a href="services.html" class="active">Services</a>
             <a href="skills.html">Skills</a>
@@ -161,7 +164,6 @@
         </div>
     </section>
 
-    <script src="js/menu.js"></script>
     <script>
         // Typing effect
         const typingText = document.querySelector(".typing");
@@ -230,5 +232,7 @@
             updateSlider();
         });
     </script>
+    <script src="js/particles.js"></script>
+    <script src="js/menu.js"></script> 
 </body>
 </html>
